@@ -1,0 +1,14 @@
+.home-wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-topbar{
+    background: var(-ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 3rem;
+    border-bottom: 3px solid var(-accent);
+}

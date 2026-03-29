@@ -237,6 +237,37 @@ stat-card{
 
 /**/
 
+obj-list l1 {
+    display: flex;
+    gap:1rem;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--rule);
+}
 
+.obj-list li:last-child { border-bottom: none;}
+
+.obj-num { 
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color:var(--rule);
+    line-height: 1;
+    min-width: 2rem;
+    margin-top: .1rem;
+}
+
+.obj-body strong {
+    display: block;
+    font-weight: 600;
+    color:var(--ink);
+    margin-bottom: .2rem;
+}
+
+.obj-body p{
+    font-size: .93rem;
+    color: var(--text-muted);
+    margin: 0;
+}
 
 

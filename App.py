@@ -5,8 +5,8 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return "Hola Mundo"
-@app.route("/PGC/")
-def PGC():
+@app.route("/Prueba/")
+def Prueba():
     return render_template("index.html")
 @app.route("/index/")
 def cluster():
@@ -18,3 +18,6 @@ def cluster():
         centroides=info["centroides"],
         resumenClusters=info["resumenClusters"]
     )
+@app.route("/PGC/")
+def PGC():
+    return render_template("PGC.html")

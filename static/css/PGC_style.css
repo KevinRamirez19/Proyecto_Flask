@@ -61,3 +61,16 @@ header h1 span { color: var(--accent); }
     max-width: 620px;
     font-weight: 300;
 }
+.header-rule {
+    margin-top:2rem;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,.15);
+}
+.header-meta {
+    display: flex;
+    gap:2rem;
+    margin-top: 1.2rem;
+    font-size: .82rem;
+    color: rgba(245, 240, 232, .5);
+    letter-spacing: .04em;
+}

@@ -1,3 +1,15 @@
+:root{
+    --ink: rgb(43, 56, 68);
+    --ink-light: gray;
+    --accent: green;
+    --accent2: red;
+    --paper: #f5f0e8;
+    --paper-dark: #ede7d9;
+    --rule: #c8bfaa;
+    --text: #2c2c2c;
+    --text-muted: #6b6560;
+}
+
 .home-wrapper{
     min-height: 100vh;
     display: flex;
@@ -10,5 +22,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.4rem 3rem;
-    border-bottom: 3px solid var(-accent);
+    border-bottom: 3px solid var(--accent);
 }
+
+.home-logo{
+    font-family: 'Playfair Dysplau', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(-paper);
+    letter-spacing: .02em;
+}
+
+.home-logo span{color: var(--accent);}

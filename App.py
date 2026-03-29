@@ -3,10 +3,11 @@ import Clustering
 
 app = Flask(__name__)
 
+#@app.route("/")
+#def home():
+#    return "Hola Mundo"
+
 @app.route("/")
-def home():
-    return "Hola Mundo"
-@app.route("/Prueba/")
 def Prueba():
     return render_template("index.html")
 @app.route("/index/")

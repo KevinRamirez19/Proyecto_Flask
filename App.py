@@ -4,4 +4,4 @@ app = Flask(__name__)
 
 @app.route("/index")
 def home():
-    return "Hola Mundos"
+    return "Hola Mundo"

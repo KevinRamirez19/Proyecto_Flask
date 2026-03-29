@@ -131,3 +131,32 @@
 }
 
 /**/
+
+.btn-pgc{
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+    background: transparent;
+    color: var(--paper);
+    font-family: 'Source Serif 4', serif;
+    font-size: .88rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: 1em 2.2rem;
+    border: 2px solid var(--accent);
+    transition: background .2s, color .2s, transform .15s;
+    animation: fadeUp .6s .4s ease both;
+}
+
+.btn-pgc:hover{
+    background: var(--accent);
+    color: #fff;
+    transform: translate(-2px);
+}
+
+.btn-pgc:active {transform: translateY(0);}
+.btn-arrow {transition: transform .2s;}
+.btn-pcg:hover .btn-arrow {transform: translateX(5px);}

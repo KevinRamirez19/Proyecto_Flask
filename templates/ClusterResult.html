@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clusters</title>
+</head>
+
+<body>
+
+    <h1>Resultado Clusters</h1>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Ingresos</th>
+            <th>Gasto</th>
+            <th>Cluster</th>
+        </tr>
+        {% for persona in resultado %}
+        <tr>
+            <td>{{ persona.nombre }}</td>
+            <td>{{ persona.edad }}</td>
+            <td>{{ persona.ingresos }}</td>
+            <td>{{ persona.gasto }}</td>
+            <td>{{ persona.cluster }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h1>Centroides</h1>
+    <p>
+        {{ centroides }}
+    </p>
+
+    <h1>Resumen Clusters</h1>
+    <p>
+        {{ resumenClusters }}
+    </p>
+
+</body>
+
+</html>

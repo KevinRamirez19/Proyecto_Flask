@@ -169,4 +169,60 @@ section h2::after{
 
 .problem-quote p { color: var(--paper); margin: 0;}
 
+.stats-row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+    gap:1rem;
+    margin: 1.8rem 0;
+}
+stat-card{
+    background: var(--paper-dark) ;
+    border: 1px solid var(--rule);
+    padding: 1.2rem 1 rem;
+    text-align: center;
+}
+.stat-num{
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+}
+.stat-label{
+    font-size: .78rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-top: .4rem;
+    display: block;
+}
+
+
+/**/
+.justif-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+@media(max-width: 620px){
+    .justif-grid{ grid-template-columns: 1fr;}
+}
+.justif-card {
+    border: 1px solid var(--rule);
+    background: #fff;
+    padding: 1.3rem 1.2rem;
+    position: relative;
+}
+.justif-card::before{
+    content: attr(data-icon);
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: .5rem;
+}
+
+
+
+
 

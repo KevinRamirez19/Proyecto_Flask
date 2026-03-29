@@ -1,0 +1,26 @@
+:root{
+    --ink: black;
+    --ink-light: gray;
+    --accent: green;
+    --accent2: red;
+    --paper: #f5f0e8;
+    --paper-dark: #ede7d9;
+    --rule: #c8bfaa;
+    --text: #2c2c2c;
+    --text-muted: #6b6560;
+}
+
+
+header{
+    background: var(--ink);
+    color:var(--paper);
+    padding: 3rem 2rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index:1;
+}

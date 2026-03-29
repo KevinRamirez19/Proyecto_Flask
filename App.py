@@ -8,3 +8,13 @@ def home():
 @app.route("/PGC/")
 def PGC():
     return render_template("index.html")
+@app.route("/index/")
+def cluster():
+    info = Clustering.RealizarClustering()
+
+    return render_template(
+        "ClusterResult.html",
+        resultado=info["resultados"],
+        centroides=info["centroides"],
+        resumenClusters=info["resumenClusters"]
+    )

@@ -270,4 +270,33 @@ obj-list l1 {
     margin: 0;
 }
 
+.obj-general {
+    background: var(--paper-dark);
+    border: 1px solid var(--rule);
+    border-left: 5px solid var(--accent2);
+    padding: 1.3rem 1.5rem;
+    margin: 1.5rem 0;
+    font-size: .97rem;
+}
+.obj-general .tag{
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    color: var(--accent2);
+    font-weight: 700;
+    display: block;
+    margin-bottom: .4rem;
+}
+
+/**/
+footer{
+    background: var(--ink);
+    color: rgba(245, 240, 232, .45);
+    text-align: center;
+    padding: 1.8rem 1rem;
+    font-size: .8rem;
+    letter-spacing: .06em;
+}
+footer span { color: var(--accent)}
+
 

@@ -28,7 +28,7 @@
 }
 
 .home-logo{
-    font-family: 'Playfair Dysplau', serif;
+    font-family: 'Playfair Dysplay', serif;
     font-size: 1.05rem;
     font-weight: 700;
     color: var(--paper);
@@ -67,9 +67,9 @@
     inset: 0;
     background: repeating-linear-gradient(
         90deg,
-        transparent
+        transparent,
         transparent 59px,
-        rgba(2555,255,255,.03) 60px
+        rgba(255,255,255,.03) 60px
     );
     pointer-events: none;
 }
@@ -99,6 +99,18 @@
     animation: fadeUp .6s .1s ease both;
 }
 
+.home-hero h1{
+    position: relative;
+    z-index: 1;
+    font-family:  'Playfair Display', serif;
+     font-size: clamp(3rem, 9vw, 6rem);
+    font-weight: 900;
+    color: var(--paper);
+    line-height: 1.1;
+    margin-bottom: .6rem;
+    animation: fadeUp .6s .2s ease both;
+}
+
 .home-hero h1 em {
     color:var(--accent);
     font-style: italic;
@@ -111,7 +123,7 @@
     font-size: 1rem;
     font-style: italic;
     font-weight: 300;
-    color: rgba(245,240,232,5);
+    color: rgba(245,240,232,.5);
     max-width: 460px;
     line-height: 1.7;
     margin-bottom: 3rem;
@@ -140,6 +152,7 @@
     gap: .75rem;
     background: transparent;
     color: var(--paper);
+    text-decoration: none;
     font-family: 'Source Serif 4', serif;
     font-size: .88rem;
     font-weight: 600;
@@ -154,9 +167,31 @@
 .btn-pgc:hover{
     background: var(--accent);
     color: #fff;
-    transform: translate(-2px);
+    transform: translateY(-2px);
 }
 
 .btn-pgc:active {transform: translateY(0);}
 .btn-arrow {transition: transform .2s;}
 .btn-pcg:hover .btn-arrow {transform: translateX(5px);}
+
+/**/
+.home-footer{
+    background: var(--ink);
+    border-top: 1px solid rgba(255,255,255,.08);
+    text-align: center;
+    padding: 1.2rem 1rem;
+    font-size: .72rem;
+    color: rgba(245,240,232,.35);
+    letter-spacing: .07em;
+}
+
+.home-footer span {color: var(--accent);}
+
+@keyframes fadeUp{
+    from{ opacity: 0;transform: translateY(18px);}
+    to{ opacity: 1;transform: translateY(0);}
+}
+
+@media (max-width: 600px) {
+    .home-topbar {padding: 1.2rem 1.5rem;}
+}

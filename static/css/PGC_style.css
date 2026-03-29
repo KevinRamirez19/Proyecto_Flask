@@ -74,3 +74,32 @@ header h1 span { color: var(--accent); }
     color: rgba(245, 240, 232, .5);
     letter-spacing: .04em;
 }
+
+nav{
+    background: var(--ink-light);
+    position: sticky;
+    top:0;
+    z-index: 100;
+    border-bottom: 3px solid var(--accent);
+}
+nav ul {
+    max-width: 900px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    gap: .25rem;
+    padding: 0 1rem;
+}
+nav a {
+    display: block;
+    padding: .85rem 1.2rem;
+    color: rgba(245, 240, 232, .7);
+    text-decoration: none;
+    font-size: .82rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: color .2s;
+}
+
+nav a:hover { color: var(--accent);}

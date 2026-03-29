@@ -98,3 +98,36 @@
     margin-bottom: 1.5rem;
     animation: fadeUp .6s .1s ease both;
 }
+
+.home-hero h1 em {
+    color:var(--accent);
+    font-style: italic;
+}
+
+.home-hero-sub {
+    position: relative;
+    z-index: 1;
+    font-family: 'Source Serif 4',serif;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(245,240,232,5);
+    max-width: 460px;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    animation: fadeUp .6s .3s ease both;
+}
+
+/**/
+
+.home-rule {
+    position: relative;
+    z-index: 1;
+    width: 48px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 2.5rem;
+    animation: fadeUp .6s .35s ease both;
+}
+
+/**/

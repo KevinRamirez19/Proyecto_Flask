@@ -10,11 +10,13 @@
     --text-muted: #6b6560;
 }
 
+
 .home-wrapper{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
+
 
 /**/
 
@@ -37,13 +39,25 @@
 
 .home-logo span{color: var(--accent);}
 
+
+
 .home-topbar-badge{
     font-size: .7rem;
     letter-spacing: .18em;
     text-transform: uppercase;
     color:rgba(245,240,232,.4);
+    display: flex;
+    align-items: center;
+    gap:6px;
 }
-
+.home-topbar-badge img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: inline-block;
+    vertical-align: middle;
+}
 /**/
 
 .home-hero{

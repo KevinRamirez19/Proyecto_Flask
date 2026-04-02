@@ -56,6 +56,16 @@ header::before{
     margin-bottom: .75rem;
     font-weight: 600;
 }
+
+.logo-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top:-15px;
+    object-fit: cover;
+    display: inline-block;
+    vertical-align: middle;
+}
 header h1 {
     font-family: 'Playfair', serif;
     font-size: clamp(2rem, 5vw, 3.4rem);

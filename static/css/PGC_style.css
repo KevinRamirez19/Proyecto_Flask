@@ -274,3 +274,15 @@ footer{
 }
 
 footer span { color: var(--accent); }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.section {
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(40px);
+}

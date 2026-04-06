@@ -116,6 +116,7 @@ nav ul {
     margin: 0 auto;
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
 nav a {
@@ -286,3 +287,32 @@ body {
     opacity: 0;
     transform: translateY(40px);
 }
+.home-btn {
+    background: #16a34a; /* verde más moderno */
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    margin-right: 15px;
+
+    transition: all 0.25s ease;
+}
+
+.home-btn span {
+    font-size: 20px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-btn:hover {
+    transform: scale(1.15);
+    background: #22c55e;
+}
+

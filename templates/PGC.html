@@ -181,5 +181,40 @@
     Desarrollado con Flask & HTML
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".section").forEach((section) => {
+  gsap.fromTo(section,
+    { opacity: 0, y: 100, scale: 0.95 },
+    {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 85%",
+        end: "top 30%",
+        scrub: true
+      }
+    }
+  );
+});
+</script>
+<script>
+gsap.to("header", {
+  y: -100,
+  scrollTrigger: {
+    trigger: "header",
+    start: "top top",
+    end: "bottom top",
+    scrub: true
+  }
+});
+</script>
 </body>
 </html>

@@ -11,165 +11,175 @@
 
 <body>
 
-    <header>
-        <div class="header-inner">
-            <p class="header-tag">Planteamiento General del Caso</p>
-            <h1>
-                <img src="{{url_for('static',filename=('img/logo.png'))}}" alt="logo" class="logo-circle">
-                Google Play Store:<br><span>Patrones de Exito</span></br>en Aplicaciones Moviles</h1>
-            <p class="header-subtitle" />
-            un estudio analitico sobre la segmentacion,
-            calificacion y popularidad de aplicaciones en
-            la tienda digital mas grande del mundo
-            </p>
-            <hr class="header-rule" />
-            <div class="header-meta">
-                <span>Analisis de Datos · 2024</span>
-                <span>Googel Play Store Dataset</span>
-                <span>Ciencia de Datos</span>
-            </div>
+<header>
+    <div class="header-inner">
+        <p class="header-tag">Planteamiento General del Caso</p>
+        <h1>
+            <img src="{{url_for('static',filename='img/logo.png')}}" alt="logo" class="logo-circle">
+            Google Play Store:<br><span>Patrones de Éxito</span> en Aplicaciones Móviles
+        </h1>
+        <p class="header-subtitle">
+            Un estudio analítico sobre la segmentación, calificación y popularidad de aplicaciones en
+            la tienda digital más grande del mundo
+        </p>
+        <hr class="header-rule" />
+        <div class="header-meta">
+            <span>Análisis de Datos · 2024</span>
+            <span>Google Play Store Dataset</span>
+            <span>Ciencia de Datos</span>
         </div>
-    </header>
+    </div>
+</header>
 
-    <nav>
-        <ul>
-            <li><a href="#problematica">Problematica</a></li>
-            <li><a href="#justificacion">Justificacion</a></li>
-            <li><a href="#objetivos">Objetivos</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section class="section" id="problematica">
-            <p class="section-label">1. Problematica</p>
-            <h2>Planteamiento del Problema</h2>
-            <p>
-                La tienda Google Play Store representa uno de los
-                ecosistemas digitales mas dinamicos del mundo
-            </p>
-            <div class="problem-quote">
-                <p>
-                    La tienda Google Play cuenta con un catalogo de miles de aplicaciones
-                    de diferente categoria
-                </p>
-            </div>
-            <p>
-                Esta ausencia de analisis sistematico
-                genera una brecha de conocimiento tanto para desarrolladores
-            </p>
-            <div class="stats-row">
-                <div class="stats-card">
-                    <span class="stat-num">3.5M</span>
-                    <span class="stat-label">Apps en Play Store</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-num">48</span>
-                    <span class="stat-label">Categorias disponibles</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-num">2.5B</span>
-                    <span class="stat-label">Dispositivos Android Activos</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-num">~10%</span>
-                    <span class="stat-label">Apps con alto rating</span>
-                </div>
-            </div>
-            <p>
-                La pregunta central que guia este estudio es:
-                <strong>¿Cuales son los factores y caracteristicas
-                    comunes qe comparten las aplicaciones mas exitosas de la Google Play Store?
-                </strong>
-            </p>
-        </section>
-        <section class="section" id="justificacion">
-            <p class="section-label">2. Justificacion</p>
-            <h2>¿Por Que Este Estudio?</h2>
-            <p>
-                La importancia de este analisis surge en la necesidad
-                de convertir una gran masas de datos no estructurados en conocimiento accionable
+<nav>
+    <ul>
+        <li><a href="#problematica">Problemática</a></li>
+        <li><a href="#justificacion">Justificación</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
+    </ul>
+</nav>
 
-            </p>
-            <div class="justif-grid">
-                <div class="justif-card">
-                    <h3>Relevancia del mercado</h3>
-                    <p> El mercado de aplicaciones moviles genera billones de dolares anualmente.
+<main>
 
-                    </p>
-                </div>
-                <div class="justif-card">
-                    <h3>Aplicacion en ciencia de datos</h3>
-                    <p>El dataset de Google Play Store es un caso
-                        ideal para aplicar tecnicas de limpieza, analisis exploratorio
-                        Clustering y visualizacion de datos en un contexto real
-                    </p>
-                </div>
-                <div class="justif-card">
-                    <h3>Toma de decisiones</h3>
-                    <p>
-                        Los hallazgos permitiran a desarrolladores enfocar sus esfuerzos
-                        en las caracteristicas que estadisticamente se asocian con mayor popularidad
-                    </p>
-                </div>
-            </div>
+<section class="section" id="problematica">
+    <h2>Planteamiento del Problema</h2>
+
+    <p>
+        La tienda Google Play Store representa uno de los ecosistemas digitales más dinámicos del mundo.
+    </p>
+
+    <div class="problem-quote">
+        <p>
+            La tienda Google Play cuenta con un catálogo de miles de aplicaciones de diferentes categorías,
+            niveles de descarga y calificaciones.
+        </p>
+    </div>
+
+    <p>
+        Esta ausencia de análisis sistemático genera una brecha de conocimiento tanto para desarrolladores
+        como para analistas de datos, dificultando la identificación de patrones de éxito.
+    </p>
+
+    <div class="stats-row">
+        <div class="stats-card">
+            <span class="stat-num">3.5M</span>
+            <span class="stat-label">Apps en Play Store</span>
+        </div>
+        <div class="stats-card">
+            <span class="stat-num">48</span>
+            <span class="stat-label">Categorías disponibles</span>
+        </div>
+        <div class="stats-card">
+            <span class="stat-num">2.5B</span>
+            <span class="stat-label">Dispositivos Android activos</span>
+        </div>
+        <div class="stats-card">
+            <span class="stat-num">~10%</span>
+            <span class="stat-label">Apps con alto rating</span>
+        </div>
+    </div>
+
+    <p>
+        <strong>
+            ¿Cuáles son los factores y características comunes que comparten las aplicaciones más exitosas de la Google Play Store?
+        </strong>
+    </p>
+</section>
+
+<section class="section" id="justificacion">
+    <h2>¿Por qué este estudio?</h2>
+
+    <p>
+        La importancia de este análisis surge de la necesidad de convertir grandes volúmenes de datos
+        en conocimiento accionable.
+    </p>
+
+    <div class="justif-grid">
+        <div class="justif-card">
+            <h3>Relevancia del mercado</h3>
             <p>
-                Desde una perspectiva academica, este proyecto consolida la aplicacion practica de metodologias
-                de analisis de datos sobre un problema real, contribuyendo al desarrollo de
-                competencias en procesamiento de informacion, pensamiento critico e interpretacion de resultado
+                El mercado de aplicaciones móviles genera billones de dólares anualmente.
             </p>
-        </section>
-        <section class="section" id="objetivos">
-            <p clas="section-label">3. Objetivos</p>
-            <h2>Objetivos del Estudio</h2>
-            <div class="obj-general">
-                <span class="tag">Objetivo General</span>
-                Analizar el conjunto de datos de la Google Play Store para identificar patrones, tendencias
-                y caracterisitcas mas comunes entre las aplicaciones con mayor popularidad
-            </div>
-            <p style="font-weight: 600; color:var(--ink); margin-bottom:5rem;">Objetivos Especificos</p>
-            <ul class="obj-list">
-                <li>
-                    <span class="obj-num">01.</span>
-                    <div class="obj-body">
-                        <strong>Recopilar y limpiar el dataset</strong>
-                        <p>Obtener el conjunto de datos de Google Play Store, realizar el proceos de limpieza
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <span class="obj-num">02.</span>
-                    <div class="obj-body">
-                        <strong>Realizar análisis exploratorio</strong>
-                        <p>Aplicar estadistica descriptiva y visualizaciones para comprender la distribucion
-                            variables como categorias
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <span class="obj-num">03.</span>
-                    <div class="obj-body">
-                        <strong>Segmentar las aplicaciones</strong>
-                        <p>Agrupacion de las aplicaciones segun sus criterios y calidad para identificacion</p>
-                    </div>
-                </li>
-                <li>
-                    <span class="obj-num">04.</span>
-                    <div class="obj-body">
-                        <strong>Identificar factores de éxito</strong>
-                        <p>Determinar que variables se correlacionan con mayores descargas</p>
-                    </div>
-                </li>
-                <li>
-                    <span class="obj-num">05.</span>
-                    <div class="obj-body">
-                        <strong>Presentar conclusiones y recomendaciones</strong>
-                        <p>Presentar resultados y/o hallazgos en un informe visual y analitico</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        Planteamiento General del Caso · <span>Google Play Store</span> · Mineria de Datos &nbsp;|&nbsp; Desarrollado con Flask &amp; HTML
-    </footer>
+        </div>
+
+        <div class="justif-card">
+            <h3>Aplicación en ciencia de datos</h3>
+            <p>
+                Este dataset es ideal para aplicar técnicas de limpieza, análisis exploratorio,
+                clustering y visualización en un contexto real.
+            </p>
+        </div>
+
+        <div class="justif-card">
+            <h3>Toma de decisiones</h3>
+            <p>
+                Los resultados permitirán a desarrolladores enfocar sus esfuerzos en características
+                asociadas con mayor éxito.
+            </p>
+        </div>
+    </div>
+
+    <p>
+        Desde una perspectiva académica, este proyecto fortalece competencias en análisis de datos,
+        pensamiento crítico e interpretación de resultados.
+    </p>
+</section>
+
+<section class="section" id="objetivos">
+    <h2>Objetivos del Estudio</h2>
+
+    <div class="obj-general">
+        <span class="tag">Objetivo General</span>
+        Analizar el conjunto de datos de la Google Play Store con el fin de identificar patrones,
+        tendencias y características comunes entre las aplicaciones con mayor nivel de popularidad.
+    </div>
+
+    <p class="obj-title">Objetivos Específicos</p>
+    <hr class="obj-divider">
+
+    <div class="obj-grid">
+
+        <div class="obj-card">
+            <span class="obj-num">01</span>
+            <h3>Preparación y limpieza de datos</h3>
+            <p>Recopilar el dataset y realizar procesos de limpieza, transformación y normalización
+                para garantizar la calidad de los datos.</p>
+        </div>
+
+        <div class="obj-card">
+            <span class="obj-num">02</span>
+            <h3>Análisis exploratorio de datos</h3>
+            <p>Aplicar técnicas estadísticas y visualizaciones para comprender la distribución
+                y relaciones entre variables.</p>
+        </div>
+
+        <div class="obj-card">
+            <span class="obj-num">03</span>
+            <h3>Segmentación mediante clustering</h3>
+            <p>Agrupar aplicaciones para identificar patrones y perfiles similares.</p>
+        </div>
+
+        <div class="obj-card">
+            <span class="obj-num">04</span>
+            <h3>Identificación de factores de éxito</h3>
+            <p>Determinar variables relacionadas con altos niveles de descargas y calificación.</p>
+        </div>
+
+        <div class="obj-card">
+            <span class="obj-num">05</span>
+            <h3>Interpretación de resultados</h3>
+            <p>Presentar conclusiones mediante visualizaciones e informes analíticos.</p>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    Planteamiento General del Caso · <span>Google Play Store</span> · Minería de Datos |
+    Desarrollado con Flask & HTML
+</footer>
+
 </body>
 </html>

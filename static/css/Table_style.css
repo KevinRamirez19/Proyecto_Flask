@@ -38,3 +38,28 @@ table{
     border-collapse: collapse;
     background: #fff;
 }
+thead tr{
+    background:var(--ink);
+    color: var(--paper);
+}
+thead th{
+    padding: .65rem 1rem;
+    text-align: left;
+    font-size: .78rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+tbody tr{
+    border-bottom: none;
+}
+tbody tr:nth-child(even){
+    background: var(--paper-dark);
+}
+
+tbody td{
+    padding : 6.rem 1rem;
+    font-size: .92rem;
+    color: var(--text)
+}

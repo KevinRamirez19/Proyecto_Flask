@@ -10,7 +10,8 @@ app = Flask(__name__)
 @app.route("/")
 def Prueba():
     return render_template("index.html")
-@app.route("/index/")
+
+@app.route("/Tabla/")
 def cluster():
     info = Clustering.RealizarClustering()
 

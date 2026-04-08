@@ -1,0 +1,40 @@
+:root{
+    --ink: rgb(43, 56, 68);
+    --ink-light: gray;
+    --accent: green;
+    --accent2: rgb(37, 109, 4);
+    --paper: #f5f0e8;
+    --paper-dark: #ede7d9;
+    --rule: #c8bfaa;
+    --text: #2c2c2c;
+    --text-muted: #6b6560;
+}
+
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Source Serif 4', Georgia, serif;
+    background-color: var(--paper);
+    color: var(--text);
+    line-height: 1.75;
+}
+h1{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--ink);
+    border-left: 5px solid var(--accent);
+    padding-left: .75rem;
+    margin:2.5rem 0 1.2rem;
+}
+h1:first-of-type{margin-bottom: 0;}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}

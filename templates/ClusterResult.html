@@ -30,14 +30,35 @@
     </table>
 
     <h1>Centroides</h1>
-    <p>
-        {{ centroides }}
-    </p>
+    <table border="1">
+        <tr> 
+            <th>Edad Promedio</th>
+            <th>Ingresos Promedio</th>
+            <th>Gasto Promedio</th>
+        </tr>
+        {% for centroide in centroides %}
+        <tr>
+            <td>{{ centroide[0] }}</td>
+            <td>{{ centroide[1] }}</td>
+            <td>{{ centroide[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 
     <h1>Resumen Clusters</h1>
-    <p>
-        {{ resumenClusters }}
-    </p>
+    <table border="1">
+        <tr>
+            <th>Cluster</th>
+            <th>Cantidad de Personas</th>
+        </tr>
+         {% for cluster, cantidad in resumenClusters.items() %}
+        <tr>
+            <td>{{ cluster}}</td>
+            <td>{{ cantidad}}</td>
+        </tr>
+        {% endfor %}
+        
+    </table>
 
 </body>
 

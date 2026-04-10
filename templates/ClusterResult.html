@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,69 +7,95 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/Table_style.css')}}">
 </head>
 
+<body>
+
+<!-- NAVBAR -->
 <nav class="navbar">
-    <a href="{{ url_for('Prueba') }}" class="nav-item">🏠</a>
+    <a href="{{ url_for('Prueba') }}" class="nav-item home">🏠</a>
     <a href="{{ url_for('cluster') }}" class="nav-item">Clusters</a>
     <a href="{{ url_for('PGC') }}" class="nav-item">PGC</a>
 </nav>
 
-<body>
 <div class="page">
-    <h1>Resultado Clusters</h1>
-    <div class="table-wrap">
-    <table border="1">
-        <tr>
-            <th>Nombre</th>
-            <th>Edad</th>
-            <th>Ingresos</th>
-            <th>Gasto</th>
-            <th>Cluster</th>
-        </tr>
-        {% for persona in resultado %}
-        <tr>
-            <td>{{ persona.nombre }}</td>
-            <td>{{ persona.edad }}</td>
-            <td>{{ persona.ingresos }}</td>
-            <td>{{ persona.gasto }}</td>
-            <td><span class="badge">{{ persona.cluster }}</span></td>
-        </tr>
-        {% endfor %}
-    </table>
-    </div>
-    <h1>Centroides</h1>
-    <div class="table-wrap">
-    <table border="1">
-        <tr> 
-            <th>Edad Promedio</th>
-            <th>Ingresos Promedio</th>
-            <th>Gasto Promedio</th>
-        </tr>
-        {% for centroide in centroides %}
-        <tr>
-            <td>{{ centroide[0] }}</td>
-            <td>{{ centroide[1] }}</td>
-            <td>{{ centroide[2] }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-    </div>
-    <h1>Resumen Clusters</h1>
-    <div class="table-wrap">
-    <table border="1">
-        <tr>
-            <th>Cluster</th>
-            <th>Cantidad de Personas</th>
-        </tr>
-         {% for cluster, cantidad in resumenClusters.items() %}
-        <tr>
-            <td>{{ cluster}}</td>
-            <td>{{ cantidad}}</td>
-        </tr>
-        {% endfor %}
-        
-    </table>
-    </div>
-    </div>
-</body>
 
+    <!-- RESULTADO -->
+    <section>
+        <h1>Resultado Clusters</h1>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Ingresos</th>
+                        <th>Gasto</th>
+                        <th>Cluster</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for persona in resultado %}
+                    <tr>
+                        <td>{{ persona.nombre }}</td>
+                        <td>{{ persona.edad }}</td>
+                        <td>{{ persona.ingresos }}</td>
+                        <td>{{ persona.gasto }}</td>
+                        <td><span class="badge">{{ persona.cluster }}</span></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- CENTROIDES -->
+    <section>
+        <h1>Centroides</h1>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr> 
+                        <th>Edad Promedio</th>
+                        <th>Ingresos Promedio</th>
+                        <th>Gasto Promedio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for centroide in centroides %}
+                    <tr>
+                        <td>{{ centroide[0] }}</td>
+                        <td>{{ centroide[1] }}</td>
+                        <td>{{ centroide[2] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- RESUMEN -->
+    <section>
+        <h1>Resumen Clusters</h1>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cluster</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cluster, cantidad in resumenClusters.items() %}
+                    <tr>
+                        <td>{{ cluster }}</td>
+                        <td>{{ cantidad }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</div>
+
+</body>
 </html>

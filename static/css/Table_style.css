@@ -77,3 +77,22 @@ tbody td{
     font-size: .92rem;
     color: var(--text)
 }
+
+.navbar {
+    display: flex;
+    gap: 15px;
+    background: #1f2937;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.nav-item:hover {
+    color: #22c55e;
+}

@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/Table_style.css')}}">
 </head>
 
+<nav class="navbar">
+    <a href="{{ url_for('Prueba') }}" class="nav-item">🏠</a>
+    <a href="{{ url_for('cluster') }}" class="nav-item">Clusters</a>
+    <a href="{{ url_for('PGC') }}" class="nav-item">PGC</a>
+</nav>
+
 <body>
 <div class="page">
     <h1>Resultado Clusters</h1>

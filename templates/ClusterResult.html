@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,69 +7,153 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/Table_style.css')}}">
 </head>
 
+<body>
+
 <nav class="navbar">
-    <a href="{{ url_for('Prueba') }}" class="nav-item">🏠</a>
+    <a href="{{ url_for('Prueba') }}" class="nav-item home">🏠</a>
     <a href="{{ url_for('cluster') }}" class="nav-item">Clusters</a>
     <a href="{{ url_for('PGC') }}" class="nav-item">PGC</a>
 </nav>
 
-<body>
 <div class="page">
-    <h1>Resultado Clusters</h1>
-    <div class="table-wrap">
-    <table border="1">
-        <tr>
-            <th>Nombre</th>
-            <th>Edad</th>
-            <th>Ingresos</th>
-            <th>Gasto</th>
-            <th>Cluster</th>
-        </tr>
-        {% for persona in resultado %}
-        <tr>
-            <td>{{ persona.nombre }}</td>
-            <td>{{ persona.edad }}</td>
-            <td>{{ persona.ingresos }}</td>
-            <td>{{ persona.gasto }}</td>
-            <td><span class="badge">{{ persona.cluster }}</span></td>
-        </tr>
-        {% endfor %}
-    </table>
-    </div>
-    <h1>Centroides</h1>
-    <div class="table-wrap">
-    <table border="1">
-        <tr> 
-            <th>Edad Promedio</th>
-            <th>Ingresos Promedio</th>
-            <th>Gasto Promedio</th>
-        </tr>
-        {% for centroide in centroides %}
-        <tr>
-            <td>{{ centroide[0] }}</td>
-            <td>{{ centroide[1] }}</td>
-            <td>{{ centroide[2] }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-    </div>
-    <h1>Resumen Clusters</h1>
-    <div class="table-wrap">
-    <table border="1">
-        <tr>
-            <th>Cluster</th>
-            <th>Cantidad de Personas</th>
-        </tr>
-         {% for cluster, cantidad in resumenClusters.items() %}
-        <tr>
-            <td>{{ cluster}}</td>
-            <td>{{ cantidad}}</td>
-        </tr>
-        {% endfor %}
-        
-    </table>
-    </div>
-    </div>
-</body>
 
+    
+    <section class="intro">
+        <div class="intro-content">
+            
+            <h1 class="intro-title">Descripción</h1>
+
+            <p class="intro-text">
+                En esta sección se presentan los resultados del análisis de segmentación (clustering) aplicado a un conjunto de datos de personas. 
+                El objetivo es agrupar individuos con características similares en función de variables como edad, ingresos y nivel de gasto.
+            </p>
+
+            <div class="intro-grid">
+
+                <div class="intro-card">
+                    <h3>Resultado Clusters</h3>
+                    <p>Clasificación de cada persona en un grupo específico.</p>
+                </div>
+
+                <div class="intro-card">
+                    <h3>Centroides</h3>
+                    <p>Valores promedio que representan cada cluster.</p>
+                </div>
+
+                <div class="intro-card">
+                    <h3>Resumen</h3>
+                    <p>Cantidad de personas por cluster.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    
+    <section>
+        <h1>Resultado Clusters</h1>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Ingresos</th>
+                        <th>Gasto</th>
+                        <th>Cluster</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for persona in resultado %}
+                    <tr>
+                        <td>{{ persona.nombre }}</td>
+                        <td>{{ persona.edad }}</td>
+                        <td>{{ persona.ingresos }}</td>
+                        <td>{{ persona.gasto }}</td>
+                        <td><span class="badge">{{ persona.cluster }}</span></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+    
+    <section>
+        <h1>Centroides</h1>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr> 
+                        <th>Edad Promedio</th>
+                        <th>Ingresos Promedio</th>
+                        <th>Gasto Promedio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for centroide in centroides %}
+                    <tr>
+                        <td>{{ centroide[0] }}</td>
+                        <td>{{ centroide[1] }}</td>
+                        <td>{{ centroide[2] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+    
+    <section>
+        <h1>Resumen Clusters</h1>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cluster</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cluster, cantidad in resumenClusters.items() %}
+                    <tr>
+                        <td>{{ cluster }}</td>
+                        <td>{{ cantidad }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+window.addEventListener("load", () => {
+
+  gsap.fromTo(".intro-title", 
+    {opacity: 0, y: -20}, 
+    {opacity: 1, y: 0, duration: 0.6}
+  );
+
+  gsap.fromTo(".intro-text", 
+    {opacity: 0, y: 20}, 
+    {opacity: 1, y: 0, duration: 0.6, delay: 0.2}
+  );
+
+  gsap.fromTo(".intro-card", 
+    {opacity: 0, y: 20}, 
+    {opacity: 1, y: 0, duration: 0.5, stagger: 0.15, delay: 0.3}
+  );
+
+});
+</script>
+
+</body>
 </html>

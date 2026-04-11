@@ -124,15 +124,16 @@
         <div class="justif-card">
             <h3>Toma de decisiones</h3>
             <p>
-                Los resultados permitirán a desarrolladores enfocar sus esfuerzos en características
-                asociadas con mayor éxito.
+                Con datos como la categoría, el tamaño de la app, el rating y las instalaciones,
+                es posible construir perfiles de éxito que orienten a desarrolladores sobre
+                dónde enfocar sus esfuerzos con mayor probabilidad de impacto.
             </p>
         </div>
     </div>
 
     <p>
-        Desde una perspectiva académica, este proyecto fortalece competencias en análisis de datos,
-        pensamiento crítico e interpretación de resultados.
+        Desde una perspectiva académica, este proyecto fortalece competencias en limpieza de datos,
+        análisis exploratorio, segmentación y comunicación de resultados sobre un caso del mundo real.
     </p>
 </section>
 
@@ -141,8 +142,10 @@
 
     <div class="obj-general">
         <span class="tag">Objetivo General</span>
-        Analizar el conjunto de datos de la Google Play Store con el fin de identificar patrones,
-        tendencias y características comunes entre las aplicaciones con mayor nivel de popularidad.
+         Analizar el dataset de <strong>9,658 aplicaciones</strong> de la Google Play Store con el fin
+        de identificar patrones, tendencias y características comunes entre las aplicaciones con mayor
+        nivel de instalaciones y calificación, aplicando técnicas de limpieza, análisis exploratorio
+        y segmentación de datos.
     </div>
 
     <p class="obj-title">Objetivos Específicos</p>
@@ -153,33 +156,41 @@
         <div class="obj-card">
             <span class="obj-num">01</span>
             <h3>Preparación y limpieza de datos</h3>
-            <p>Recopilar el dataset y realizar procesos de limpieza, transformación y normalización
-                para garantizar la calidad de los datos.</p>
+            <p>RDepurar el dataset original de <strong>10,841 registros</strong>, eliminando la fila
+                corrupta detectada, <strong>1,183 duplicados</strong> y normalizando columnas como
+                <code>Installs</code>, <code>Price</code>, <code>Size</code> y <code>Type</code>
+                para garantizar la calidad del análisis.</p>
         </div>
 
         <div class="obj-card">
             <span class="obj-num">02</span>
             <h3>Análisis exploratorio de datos</h3>
-            <p>Aplicar técnicas estadísticas y visualizaciones para comprender la distribución
-                y relaciones entre variables.</p>
+            <p>Explorar la distribución de ratings (promedio <strong>4.17</strong>), instalaciones
+                y precios entre las <strong>33 categorías</strong> del dataset, identificando
+                tendencias y valores atípicos mediante estadísticas descriptivas y visualizaciones.</p>
         </div>
 
         <div class="obj-card">
             <span class="obj-num">03</span>
             <h3>Segmentación mediante clustering</h3>
-            <p>Agrupar aplicaciones para identificar patrones y perfiles similares.</p>
+            <p>Agrupar las <strong>9,658 apps</strong> según variables como categoría, tipo
+                (gratuita/pago), tamaño, rating e instalaciones para descubrir perfiles de
+                aplicaciones con comportamientos similares.</p>
         </div>
 
         <div class="obj-card">
             <span class="obj-num">04</span>
             <h3>Identificación de factores de éxito</h3>
-            <p>Determinar variables relacionadas con altos niveles de descargas y calificación.</p>
+            <p>Determinar qué variables — categoría, precio, tamaño o tipo de app — tienen
+                mayor correlación con altos niveles de instalaciones y ratings superiores
+                a <strong>4.5 sobre 5</strong>.</p>
         </div>
 
         <div class="obj-card">
             <span class="obj-num">05</span>
             <h3>Interpretación de resultados</h3>
-            <p>Presentar conclusiones mediante visualizaciones e informes analíticos.</p>
+            <p>Presentar conclusiones accionables mediante visualizaciones interactivas e informes
+                analíticos que respondan la pregunta central del estudio.</p>
         </div>
 
     </div>
